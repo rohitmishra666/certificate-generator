@@ -9,7 +9,7 @@ const AdminCertificates = () => {
     useEffect(() => {
         const fetchCertificates = async () => {
             try {
-                const response = await axios.get('http://localhost:8001/api/certificate/generate');
+                const response = await axios.get(import.meta.env.BACKEND_URL);
                 console.log(response)
                 setCertificates(response.data);
                 setLoading(false);

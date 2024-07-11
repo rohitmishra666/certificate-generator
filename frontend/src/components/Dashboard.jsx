@@ -9,13 +9,14 @@ const CertificateForm = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false);
+
     const handleSubmit = async (e) => {
         setLoading(true);
         e.preventDefault();
         try {
             const response = await axios.post(import.meta.env.VITE_BACKEND_URL, { name, course, date, email });
             console.log(response);
-            window.open(response.data.certificate.pdfLink, '_blank')
+            window.open(response.data.certificate.pdfLink, '_blank');
             window.location.href = response.data.certificate.downloadLink;
             setLoading(false);
             setMessage('Certificate Generated Successfully');
@@ -27,8 +28,8 @@ const CertificateForm = () => {
     };
 
     return (
-        <div className="h-screen flex items-center justify-center">
-            <div className="rounded-lg shadow-md w-full max-w-md">
+        <div className="h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div className="rounded-lg shadow-md w-full max-w-md bg-gray-800 p-4 sm:p-6 lg:p-8">
                 <h1 className="text-2xl font-bold mb-6 text-white text-center">Generate Certificate</h1>
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
@@ -79,7 +80,6 @@ const CertificateForm = () => {
                             Generate Certificate
                         </span>
                     </button>
-
                 </form>
                 {!loading && message && <p className="mt-6 text-center text-green-500">{message}</p>}
             </div>

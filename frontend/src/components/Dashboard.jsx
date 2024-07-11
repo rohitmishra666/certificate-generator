@@ -14,10 +14,7 @@ const CertificateForm = () => {
         e.preventDefault();
         try {
             const response = await axios.post(import.meta.env.VITE_BACKEND_URL, { name, course, date, email });
-<<<<<<< HEAD
             console.log(response);
-=======
->>>>>>> d092cde871520c5d695b50728c56ffc30ac0d3ff
             window.open(response.data.certificate.pdfLink, '_blank')
             window.location.href = response.data.certificate.downloadLink;
             setLoading(false);

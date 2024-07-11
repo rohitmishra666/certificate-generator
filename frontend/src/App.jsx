@@ -31,7 +31,6 @@ function App() {
         setShowDropdown(!showDropdown);
     };
 
-
     return (
         <>
             <div className="inset-0 -z-10 h-full w-full items-center [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
@@ -42,17 +41,13 @@ function App() {
                     >
                         TUTEDUDE
                     </button>
+                    <button
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2"
+                        onClick={() => window.location.href = "/past"}
 
-                    {window.location.href === "http://localhost:5173/" && (
-                        <button
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-2"
-                            onClick={() => window.location.href = "/past"}
-                            
-                        >
-                            Issued Certificates
-                        </button>
-                    )}
-
+                    >
+                        Issued Certificates
+                    </button>
                     <div className="relative">
                         <button
                             className="bg-blue-500 hover:bg-blue-700 m-2 text-white font-bold py-2 px-5 rounded-full"

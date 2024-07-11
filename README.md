@@ -1,4 +1,3 @@
-Below is a `README.md` for your project, incorporating all the details you've provided:
 
 ```markdown
 # Certificate Generator
@@ -33,7 +32,7 @@ This project is a Certificate Generator application that allows admins to manage
 ## Tech Stack
 
 - **Frontend**: React, Tailwind CSS, React Router DOM, Axios
-- **Backend**: Node.js, Express
+- **Backend**: Node.js, Express, pdf-lib
 - **Database**: MongoDB
 - **Storage**: Google Drive
 
